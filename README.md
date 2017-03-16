@@ -23,5 +23,5 @@ de stackoverflow da muy buena información.
 
 PD: Para mas informacion con YouCompleteMe, ejecuta después de instalarlo ":h ins-completion" y ":h complete-functions".
 
-PD2: Para mas informacion con lldb.nvim, ejecutar ":h lldb" después de instalar el plugin tal y como dice critiqjo en su README.ms ('
-<a href="https://github.com/critiqjo/lldb.nvim">critiqjo/lldb.nvim</a>').
+PD2: Para mas informacion con lldb.nvim, ejecutar ":h lldb" después de instalar el plugin tal y como dice critiqjo en su README.md
+('<a href="https://github.com/critiqjo/lldb.nvim">critiqjo/lldb.nvim</a>').
