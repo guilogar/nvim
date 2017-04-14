@@ -103,6 +103,7 @@ let g:syntastic_style_warning_symbol = '⚠'
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_c_checkers = ['gcc']
 
+"let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
