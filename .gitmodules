@@ -46,3 +46,6 @@
 [submodule "bundle/python-client"]
 	path = bundle/python-client
 	url = https://github.com/neovim/python-client.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git

@@ -39,7 +39,6 @@ filetype off
 
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'nerdtree'
 Plugin 'tagbar'
 Plugin 'scrooloose/syntastic'
@@ -55,6 +54,7 @@ Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
 
 call plug#begin("~/.config/nvim/bundle/")
+Plug 'Valloric/YouCompleteMe'
 Plug 'critiqjo/lldb.nvim'
 Plug 'neovim/python-client'
 call plug#end()
@@ -127,7 +127,7 @@ let g:ycm_key_invoke_completion = '<C-Space>'
 "
 "let g:ycm_complete_in_strings = 1 "default 1
 "let g:ycm_collect_identifiers_from_tags_files = 0 "default 0
-"let g:ycm_path_to_python_interpreter = '' "default ''
+"let g:ycm_path_to_python_interpreter = '/usr/bin/python3' "default ''
 "
 "let g:ycm_server_use_vim_stdout = 0 "default 0 (logging to console)
 "let g:ycm_server_log_level = 'info' "default info
