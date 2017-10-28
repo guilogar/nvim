@@ -57,6 +57,7 @@ call plug#begin("~/.config/nvim/bundle/")
 Plug 'Valloric/YouCompleteMe'
 Plug 'critiqjo/lldb.nvim'
 Plug 'neovim/python-client'
+Plug 'lervag/vimtex'
 call plug#end()
 filetype plugin indent on
 
@@ -66,14 +67,12 @@ map <F4> :SyntasticInfo<cr>
 map <F5> :TagbarToggle<cr>
 map <F6> :lclose<cr>
 map <F8> :pclose<cr>
-
-
-"" To Vertical switch the tabs
 map <F12> :windo wincmd H<cr>
 
 "execute pathogen#infect()
 
 let mapleader = ","
+let maplocalleader = ","
 :inoremap ( ()<Esc>i
 :inoremap [ []<Esc>i
 :inoremap { {}<Esc>i
