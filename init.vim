@@ -79,8 +79,8 @@ let maplocalleader = ","
 :inoremap " ""<Esc>i
 :inoremap ' ''<Esc>i
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Syntastic Options and Configuration
 
 set statusline+=%#warningmsg#
@@ -108,16 +108,22 @@ let g:syntastic_c_checkers = ['gcc']
 
 "let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" YouCompleteMe Options and Configuration
 
 let g:ycm_show_diagnostics_ui = 0 "default 1
 let g:ycm_key_invoke_completion = '<C-Space>'
 
-" will put icons in Vim's gutter on lines that have a diagnostic set.
-" Turning this off will also turn off the YcmErrorLine and YcmWarningLine
-" highlighting
+" Make YCM compatible with UltiSnips
+let g:ycm_key_list_select_completion = ['<s-tab>', '<Down>', '<C-j>']
+let g:ycm_key_list_previous_completion = ['<c-tab>', '<Up>', '<C-k>']
+
+if(!exists('g:ycm_semantic_triggers'))
+    let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
 
 "let g:ycm_enable_diagnostic_signs = 1
 "let g:ycm_enable_diagnostic_highlighting = 0
@@ -140,12 +146,6 @@ let g:ycm_key_invoke_completion = '<C-Space>'
 "let g:ycm_filetype_whitelist = { '*': 1 }
 "
 "nnoremap <F10> :YcmForceCompileAndDiagnostics <CR>
-
-
-" Make YCM compatible with UltiSnips
-let g:ycm_key_list_select_completion = ['<s-tab>', '<Down>', '<C-j>']
-let g:ycm_key_list_previous_completion = ['<c-tab>', '<Up>', '<C-k>']
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
