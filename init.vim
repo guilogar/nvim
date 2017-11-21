@@ -4,7 +4,6 @@ if has("syntax")
   syntax on
 endif
 
-set background=dark
 
 "if has("autocmd")
 "  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -19,6 +18,8 @@ set background=dark
 "set hidden    	  	" Hide buffers when they are abandoned
 "set mouse=a   	  	" Enable mouse usage (all modes)
 
+set statusline=%f\ %l,%c
+set background=dark
 set showmatch  	  	" Show matching brackets.
 set ignorecase 	  	" Do case insensitive matching
 set incsearch  	  	" Incremental search
