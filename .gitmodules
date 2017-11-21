@@ -46,6 +46,6 @@
 [submodule "bundle/python-client"]
 	path = bundle/python-client
 	url = https://github.com/neovim/python-client.git
-[submodule "bundle/YouCompleteMe"]
-	path = bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/vimtex"]
+	path = bundle/vimtex
+	url = https://github.com/lervag/vimtex.git
