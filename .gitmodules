@@ -52,3 +52,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/javacomplete2"]
+	path = bundle/javacomplete2
+	url = https://github.com/artur-shaik/vim-javacomplete2.git

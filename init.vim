@@ -9,9 +9,9 @@ endif
 "  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 "endif
 
-"if has("autocmd")
-"  filetype plugin indent on
-"endif
+if has("autocmd")
+  filetype plugin indent on
+endif
 
 "set showcmd   	  	" Show (partial) command in status line.
 "set smartcase 	  	" Do smart case matching
@@ -35,30 +35,29 @@ setlocal omnifunc=syntaxcomplete#Complete
 set list listchars=tab:→\ ,trail:·
 
 set nocompatible
-
 filetype off
 
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'nerdtree'
 Plugin 'tagbar'
-Plugin 'scrooloose/syntastic'
 Plugin 'nerdcommenter'
 Plugin 'tern_for_vim'
+Plugin 'javacomplete2'
+Plugin 'scrooloose/syntastic'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'altercation/vim-colors-solarized'
-"Plugin 'mattn/emmet-vim'
 call vundle#end()
 
 call plug#begin("~/.config/nvim/bundle/")
 Plug 'Valloric/YouCompleteMe'
 Plug 'critiqjo/lldb.nvim'
 Plug 'neovim/python-client'
-Plug 'lervag/vimtex'
+Plug 'vimtex'
 call plug#end()
 filetype plugin indent on
 
@@ -66,8 +65,8 @@ map <F2> :NERDTreeToggle<cr>
 map <F3> :tabnext<cr>
 map <F4> :SyntasticInfo<cr>
 map <F5> :TagbarToggle<cr>
-map <F6> :lclose<cr>
-map <F8> :pclose<cr>
+map <F6> :JCimportsAddMissing<cr>
+map <F7> :JCimportsRemoveUnused<cr>
 map <F12> :windo wincmd H<cr>
 
 "execute pathogen#infect()
@@ -112,6 +111,19 @@ let g:syntastic_c_checkers = ['gcc']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" UltiSnips Options and Configuration
+
+" Better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<c-tab>"
+let g:UltiSnipsJumpForwardTrigger = "<c-tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsListSnippets = "<c-l>"
+
+let g:tern_show_argument_hints = 'on_hold'
+let g:tern_show_signature_in_pum = 0
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" YouCompleteMe Options and Configuration
 
 let g:ycm_show_diagnostics_ui = 0 "default 1
@@ -125,6 +137,7 @@ if(!exists('g:ycm_semantic_triggers'))
     let g:ycm_semantic_triggers = {}
 endif
 let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
+let g:ycm_filetype_blacklist = { 'java': 1 }
 
 "let g:ycm_enable_diagnostic_signs = 1
 "let g:ycm_enable_diagnostic_highlighting = 0
@@ -148,15 +161,3 @@ let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
 "
 "nnoremap <F10> :YcmForceCompileAndDiagnostics <CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" UltiSnips Options and Configuration
-
-" Better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<c-tab>"
-let g:UltiSnipsJumpForwardTrigger = "<c-tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-let g:UltiSnipsListSnippets = "<c-l>"
-
-let g:tern_show_argument_hints = 'on_hold'
-let g:tern_show_signature_in_pum = 0
