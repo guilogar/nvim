@@ -4,14 +4,13 @@ if has("syntax")
   syntax on
 endif
 
-
 "if has("autocmd")
 "  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 "endif
 
-if has("autocmd")
-  filetype plugin indent on
-endif
+"if has("autocmd")
+"  filetype plugin indent on
+"endif
 
 "set showcmd   	  	" Show (partial) command in status line.
 "set smartcase 	  	" Do smart case matching
@@ -30,9 +29,9 @@ set autoindent
 set nu
 set tabstop=4 shiftwidth=4
 set expandtab
-setlocal omnifunc=syntaxcomplete#Complete
 
 set list listchars=tab:→\ ,trail:·
+setlocal omnifunc=syntaxcomplete#Complete
 
 set nocompatible
 filetype off
@@ -60,6 +59,7 @@ Plug 'neovim/python-client'
 Plug 'vimtex'
 call plug#end()
 filetype plugin indent on
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 map <F2> :NERDTreeToggle<cr>
 map <F3> :tabnext<cr>
@@ -137,7 +137,6 @@ if(!exists('g:ycm_semantic_triggers'))
     let g:ycm_semantic_triggers = {}
 endif
 let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
-let g:ycm_filetype_blacklist = { 'java': 1 }
 
 "let g:ycm_enable_diagnostic_signs = 1
 "let g:ycm_enable_diagnostic_highlighting = 0
