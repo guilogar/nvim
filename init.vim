@@ -105,6 +105,8 @@ let g:syntastic_style_warning_symbol = '⚠'
 " Checkers para los distintos lenguajes.
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_c_checkers = ['gcc']
+let g:syntastic_cpp_checkers = ['g++']
+let g:syntastic_cpp_cpp_args = "-pthread -std=c++11 -Wl,--no-as-needed"
 
 "let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
 
