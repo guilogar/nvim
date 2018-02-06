@@ -137,6 +137,7 @@ if(!exists('g:ycm_semantic_triggers'))
     let g:ycm_semantic_triggers = {}
 endif
 let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
+let g:ycm_confirm_extra_conf = 0
 
 "let g:ycm_enable_diagnostic_signs = 1
 "let g:ycm_enable_diagnostic_highlighting = 0
@@ -153,7 +154,6 @@ let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
 "let g:ycm_error_symbol = '>>'
 "
 "let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'  "where to search for .ycm_extra_conf.py if not found
-"let g:ycm_confirm_extra_conf = 1
 "
 "let g:ycm_goto_buffer_command = 'same-buffer' "[ 'same-buffer', 'horizontal-split', 'vertical-split', 'new-tab' ]
 "let g:ycm_filetype_whitelist = { '*': 1 }
