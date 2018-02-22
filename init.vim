@@ -67,6 +67,7 @@ map <F4> :SyntasticInfo<cr>
 map <F5> :TagbarToggle<cr>
 map <F6> :JCimportsAddMissing<cr>
 map <F7> :JCimportsRemoveUnused<cr>
+map <F8> <Plug>LLBreakSwitch
 map <F12> :windo wincmd H<cr>
 
 "execute pathogen#infect()
