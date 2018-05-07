@@ -63,7 +63,7 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 map <F2> :NERDTreeToggle<cr>
 map <F3> :tabnext<cr>
-map <F4> :SyntasticInfo<cr>
+map <F4> :tabprev<cr>
 map <F5> :TagbarToggle<cr>
 map <F6> :JCimportsAddMissing<cr>
 map <F7> :JCimportsRemoveUnused<cr>
