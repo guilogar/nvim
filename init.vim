@@ -90,13 +90,13 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_signs = 1
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_auto_jump = 1
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
-let g:syntastic_loc_list_height = 3
+let g:syntastic_loc_list_height = 15
 
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
@@ -108,6 +108,8 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_c_checkers = ['gcc']
 let g:syntastic_cpp_compiler = "g++"
 let g:syntastic_cpp_compiler_options = "-pthread -std=c++11 -Wl,--no-as-needed"
+
+let g:syntastic_mode_map = { 'passive_filetypes': [''] }
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
