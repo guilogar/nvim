@@ -105,9 +105,15 @@ let g:syntastic_style_warning_symbol = '⚠'
 
 " Checkers para los distintos lenguajes.
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_c_checkers = ['gcc']
+"let g:syntastic_c_checkers = []
+"let g:syntastic_cpp_checkers = ['clang_check']
+"let g:syntastic_cpp_remove_include_errors = 1
+"let g:syntastic_c_remove_include_errors = 1
+"let g:syntastic_cpp_include_dirs = []
+
 let g:syntastic_cpp_compiler = "g++"
-let g:syntastic_cpp_compiler_options = "-pthread -std=c++11 -Wl,--no-as-needed"
+let g:syntastic_cpp_compiler_options = "-std=c++11 -pthread -Wl,--no-as-needed"
+let g:syntastic_cpp_config_file = ".syntastic_cpp_config"
 
 let g:syntastic_mode_map = { 'passive_filetypes': [''] }
 
