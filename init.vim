@@ -29,6 +29,11 @@ set autoindent
 set nu
 set tabstop=4 shiftwidth=4
 set expandtab
+set foldmethod=syntax
+""set nofoldenable
+""set foldmethod=indent
+""set foldnestmax=10
+""set foldlevel=1
 
 set list listchars=tab:→\ ,trail:·
 setlocal omnifunc=syntaxcomplete#Complete
