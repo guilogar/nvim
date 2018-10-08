@@ -43,11 +43,11 @@ filetype off
 
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'nerdtree'
+Plugin 'scrooloose/nerdtree'
 Plugin 'tagbar'
-Plugin 'nerdcommenter'
-Plugin 'tern_for_vim'
-Plugin 'javacomplete2'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'artur-shaik/javacomplete2'
 Plugin 'scrooloose/syntastic'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
