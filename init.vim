@@ -44,7 +44,7 @@ filetype off
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'scrooloose/nerdtree'
-Plugin 'tagbar'
+Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'artur-shaik/vim-javacomplete2'
@@ -61,7 +61,7 @@ call plug#begin("~/.config/nvim/bundle/")
 Plug 'Valloric/YouCompleteMe'
 Plug 'critiqjo/lldb.nvim'
 Plug 'neovim/python-client'
-Plug 'vimtex'
+Plug 'lervag/vimtex'
 call plug#end()
 filetype plugin indent on
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
