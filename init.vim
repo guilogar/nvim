@@ -41,6 +41,14 @@ setlocal omnifunc=syntaxcomplete#Complete
 set nocompatible
 filetype off
 
+call plug#begin("~/.config/nvim/bundle/")
+Plug 'VundleVim/Vundle.vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+Plug 'critiqjo/lldb.nvim'
+Plug 'neovim/python-client'
+Plug 'lervag/vimtex'
+call plug#end()
+
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin("~/.config/nvim/bundle/")
 Plugin 'scrooloose/nerdtree'
@@ -57,12 +65,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
 
-call plug#begin("~/.config/nvim/bundle/")
-Plug 'Valloric/YouCompleteMe'
-Plug 'critiqjo/lldb.nvim'
-Plug 'neovim/python-client'
-Plug 'lervag/vimtex'
-call plug#end()
 filetype plugin indent on
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
