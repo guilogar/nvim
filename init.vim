@@ -63,6 +63,8 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'othree/html5.vim'
+Plugin 'mattn/emmet-vim'
 call vundle#end()
 
 filetype plugin indent on
