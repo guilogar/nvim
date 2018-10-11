@@ -8,10 +8,9 @@ Para empezar, eso incluye los archivos para la configuración del vim, ya con el
 
 Para que la configuracion en el NeoVIM funcione, se debe clonar este repositorio en ~/.config/nvim/
 
-Para los demas plugins, tan solo hay que hacer <i>git submodule update --init --recursive</i> dentro de ~/.config/nvim/
+Para los plugin de instalación, tan solo hay que hacer <i>git submodule update --init --recursive</i> dentro de ~/.config/nvim/
 
-Emmet esta en autoload por defecto con mis propias modificaciones. En caso de que se quiera por defecto, se descomenta
-la línea 'Plugin 'mattn/emmet'' y se borra los archivos de autoload y plugin pertenecientes a emmet.
+Después de instalar vim-plug, se debe abrir el editor por primera vez de tal forma: nvim +PlugInstall +BundleInstall
 
 Para que el YouCompleteMe funcione, se nesecita además la versión de vim "compilada" en python.
 
@@ -21,7 +20,5 @@ Para el resto de escritorios y distribuciones de Linux,
 este <a href="http://stackoverflow.com/questions/20160902/how-to-solve-requires-python-2-x-support-in-linux-vim-and-it-have-python-2-6-6">post</a> 
 de stackoverflow da muy buena información.
 
-PD: Para mas informacion con YouCompleteMe, ejecuta después de instalarlo ":h ins-completion" y ":h complete-functions".
-
-PD2: Para mas informacion con lldb.nvim, ejecutar ":h lldb" después de instalar el plugin tal y como dice critiqjo en su README.md
+PD: Para mas informacion con lldb.nvim, ejecutar ":h lldb" después de instalar el plugin tal y como dice critiqjo en su README.md
 ('<a href="https://github.com/critiqjo/lldb.nvim">critiqjo/lldb.nvim</a>').
