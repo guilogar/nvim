@@ -111,6 +111,14 @@ let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_style_error_symbol = '✗'
 let g:syntastic_style_warning_symbol = '⚠'
+let g:syntastic_quiet_messages = { "regex": [
+    \ '\mpossible unwanted space at "{"',
+    \ '\mCommand terminated with space.\',
+    \ '\m-> unmatched *',
+    \ '\m<- unmatched *',
+    \ '\mYou should put a space in front of parenthesis.\',
+    \ '\mWrong length of dash may have been used.\'
+\ ] }
 
 " Checkers para los distintos lenguajes.
 let g:syntastic_javascript_checkers = ['jshint']
