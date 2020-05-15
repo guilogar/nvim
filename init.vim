@@ -47,7 +47,6 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'critiqjo/lldb.nvim'
 Plug 'neovim/python-client'
 Plug 'lervag/vimtex'
-Plug 'kassio/neoterm'
 call plug#end()
 
 set rtp+=~/.config/nvim/bundle/Vundle.vim
